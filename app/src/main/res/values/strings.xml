@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Tabacalera</string>
+
+    <string name="info">
+        <item>"
+            La Tabacalera (LTBC) es un centro social que impulsa la participación directa de los ciudadanos en la gestión del dominio público. Un centro cultural que entiende la cultura como una noción que abarca las capacidades creativas y sociales de la ciudadanía.Dichas capacidades comprenden no solo la producción artística, sino también la acción social, el pensamiento crítico y la difusión de ideas, obras y procedimientos que buscan expandir y democratizar la esfera pública.
+            LTBC es un centro integral que incluye lenguajes y modos de expresión, pero también la complejidad demográfica, cultural, étnica, de registros y modos de habitar del territorio y del tiempo inmediatos.Para posibilitar ese nuevo modelo son necesarias: la plena autonomía de organización y desarrollo de la iniciativa por parte de quienes la conforman, la exploración de la gestión de lo público en términos de democracia participativa, el fomento de las prácticas culturales de bajo coste y de la cultura libre, una metodología de programación distante de las prácticas clásicas de la gestión cultural y el empeño por nivelar las diversas escalas de la expresión social y cultural.
+            En LTBC no se muestran solo las iniciativas que se sitúan establemente en el edificio, sino todas aquellas que precisan del espacio y se atienen a los criterios que lo sostienen: cultura libre y gratuita, cooperación, horizontalidad, transparencia, uso no lucrativo ni privativo, sino colectivo, solidario y responsable de los recursos"
+        </item>
+    </string>
+
+    <string name="ubicacion">
+        <item>"
+            CSA La Tabacalera de Lavapiés
+            Acceso “Entrada mujeres”
+
+            Calle Embajadores 53 Madrid (España)
+            Metro y cercanías: Embajadores"
+        </item>
+    </string>
+
+    <string name="maps">
+        <item>
+            "Haz click en el siguiente icono para abrir la ubicación en Google Maps"
+        </item>
+    </string>
+
+</resources>

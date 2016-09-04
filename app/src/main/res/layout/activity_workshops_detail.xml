@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+                android:id="@+id/activity_talleres_detalle"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="false"
+                tools:context=".workshops.WorkshopsDetailActivity"
+                android:weightSum="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rtoolbar">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/GalaxyZooThemeToolbarDarkOverflow"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"/>
+        <View
+            android:id="@+id/lien"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#999"/>
+    </android.support.design.widget.AppBarLayout>
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rtoolbar"
+        android:layout_height="wrap_content">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="357dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_below="@+id/TallerTextName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <ImageView
+            android:id="@+id/TallerImageDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                    android:id="@+id/TallerTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TallerImageDetalle"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/TallerTextDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="italic"
+                android:text="TextView"
+                android:layout_below="@+id/TallerTextName"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/TallerTextDetalle"/>
+
+            <!--                android:gravity="center_horizontal"
+                            android:layout_gravity="fill_horizontal"-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+ <!--   </android.support.v7.widget.CardView>-->
+</android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+    <!--   </RelativeLayout>-->
