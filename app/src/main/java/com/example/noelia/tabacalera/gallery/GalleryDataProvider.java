@@ -39,6 +39,7 @@ public class GalleryDataProvider {
         }
         return null;
     }*/
+/*
 
     private String image;
 
@@ -51,4 +52,6 @@ public class GalleryDataProvider {
     public void setImage(String image){
         this.image = image;
     }
+}
+*/
 }

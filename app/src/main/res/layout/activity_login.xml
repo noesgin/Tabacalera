@@ -36,15 +36,6 @@
         android:inputType="text|textPersonName"
         android:background="@drawable/rounded_edit_text"/>
 
-    <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        app2:srcCompat="@drawable/logo1"
-        android:layout_marginBottom="68dp"
-        android:layout_above="@+id/etUsername"
-        android:layout_centerHorizontal="true"/>
-
     <Button
         android:id="@+id/bLogin"
         android:text="Login"
@@ -57,24 +48,37 @@
         android:layout_alignParentStart="true"/>
 
     <TextView
-        android:text="Tabacalera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_marginBottom="40dp"
-        android:id="@+id/textView"
-        android:layout_above="@+id/etUsername"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
         android:id="@+id/tvRegisterLink"
         android:layout_width="wrap_content"
         android:text="Register"
         android:textStyle="bold"
+        android:textSize="20dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="19dp"
         android:layout_below="@+id/bLogin"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/tipo"
+        app2:srcCompat="@drawable/tipo3"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/etUsername"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app2:srcCompat="@drawable/logo4"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/tipo"
+        android:layout_alignRight="@+id/tvRegisterLink"
+        android:layout_alignEnd="@+id/tvRegisterLink"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.noelia.tabacalera.news;
+package com.example.noelia.tabacalera.location;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,7 +14,7 @@ import com.example.noelia.tabacalera.R;
 
 import java.util.Locale;
 
-public class NewsActivity extends AppCompatActivity {
+public class LocationActivity extends AppCompatActivity {
     ViewPager viewPager;
     //NewsAdapter adapter;
 
@@ -22,7 +22,7 @@ public class NewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_news);
+        setContentView(R.layout.activity_location);
 
         ////TOOLBAR////
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
@@ -35,7 +35,7 @@ public class NewsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // back button pressed
                 finish();
-                NewsActivity.this.overridePendingTransition(R.anim.right_in, R.anim.right_out);
+                LocationActivity.this.overridePendingTransition(R.anim.right_in, R.anim.right_out);
             }
         });
 
@@ -45,7 +45,7 @@ public class NewsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String uri = String.format(Locale.ENGLISH, "geo:%f,%f", 40.4062145, -3.7052288);
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                NewsActivity.this.startActivity(intent);
+                LocationActivity.this.startActivity(intent);
             }
 
         });

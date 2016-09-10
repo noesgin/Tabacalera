@@ -8,14 +8,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-      <!--  <activity android:name=".Splash">-->
+        <activity android:name=".Splash">
 
             <!-- <activity android:name=".login.LoginActivity"> -->
-             <activity android:name=".home.HomeActivity">
+        <!--<activity android:name=".home.HomeActivity">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +38,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".home.HomeActivity"></meta-data>
         </activity>
-        <!--<activity android:name=".home.HomeActivity" />-->
+        <activity android:name=".home.HomeActivity" />
         <activity android:name=".events.EventsActivity" />
         <activity
             android:name=".workshops.WorkshopsDetailActivity"
@@ -54,7 +54,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".gallery.GalleryActivity" />
         </activity>-->
-        <activity android:name=".news.NewsActivity"
+        <activity android:name=".location.LocationActivity"
             android:parentActivityName=".home.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

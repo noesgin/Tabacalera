@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -15,12 +16,13 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.noelia.tabacalera.InfoActivity;
 import com.example.noelia.tabacalera.R;
 import com.example.noelia.tabacalera.events.EventsActivity;
 import com.example.noelia.tabacalera.gallery.GalleryActivity;
-import com.example.noelia.tabacalera.news.NewsActivity;
+import com.example.noelia.tabacalera.location.LocationActivity;
 import com.example.noelia.tabacalera.workshops.WorkshopsActivity;
 
 
@@ -77,6 +79,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
         ////INFO TOOLBAR////
         final ImageButton info = (ImageButton)findViewById(R.id.info);
         info.setOnClickListener(new View.OnClickListener() {
@@ -91,9 +94,9 @@ public class HomeActivity extends AppCompatActivity {
 
     ///LISTVIEW////
     private void vistas() {
-        String classNames[] = {"Talleres", "Eventos", "Galeria", "Ubicación"};
+        String classNames[] = {"Talleres", "Eventos", "Galería", "Ubicación"};
 
-        int[] listImages = {R.drawable.pencil, R.drawable.calendar, R.drawable.image,R.drawable.news};
+        int[] listImages = {R.drawable.pencil, R.drawable.calendar, R.drawable.image,R.drawable.ubicacion};
         //ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classNames);
         ListAdapter adapter = new HomeListAdapter(this, classNames, listImages);
 
@@ -117,11 +120,31 @@ public class HomeActivity extends AppCompatActivity {
                     Intent intent = new Intent(HomeActivity.this, GalleryActivity.class);
                     startActivity(intent);
                 } else if (position == 3) {
-                    Intent intent = new Intent(HomeActivity.this, NewsActivity.class);
+                    Intent intent = new Intent(HomeActivity.this, LocationActivity.class);
                     startActivity(intent);
                 }
             }
         });
     }
 
+    public Boolean exit = false;
+    public void onBackPressed() {
+        if (exit) {
+            //this.finish(); // finish activity
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Pulsa de nuevo atrás para salir.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
+        }
+    }
 }

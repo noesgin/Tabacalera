@@ -73,7 +73,6 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Usuario no encontrado, por favor regístrese", Toast.LENGTH_SHORT).show();
                             }
 
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

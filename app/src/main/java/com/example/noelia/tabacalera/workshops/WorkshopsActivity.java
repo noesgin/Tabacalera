@@ -1,3 +1,4 @@
+
 package com.example.noelia.tabacalera.workshops;
 
 import android.app.ProgressDialog;
@@ -39,6 +40,7 @@ public class WorkshopsActivity extends AppCompatActivity {
     RequestQueue requestQueue;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -68,6 +70,7 @@ public class WorkshopsActivity extends AppCompatActivity {
         });
     }
 
+
     private void showInfo() {
 
         String type = getIntent().getStringExtra(TYPE);
@@ -92,12 +95,6 @@ public class WorkshopsActivity extends AppCompatActivity {
         JsonArrayRequest request = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                boolean event = false;
-                try {
-                    event = response.getJSONObject(0).has("id_events"); // Check only the first one
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
                 for (int i = 0; i < response.length(); i++) {
                     try {
@@ -116,9 +113,7 @@ public class WorkshopsActivity extends AppCompatActivity {
                         Toast.makeText(WorkshopsActivity.this, "" + e, Toast.LENGTH_LONG).show();
                     }
                 }
-              /*  if (event) {
-                    Collections.sort(list, new ScheduleComparator());
-                }*/
+
 
                 adapter.notifyDataSetChanged();
             }
@@ -132,4 +127,5 @@ public class WorkshopsActivity extends AppCompatActivity {
         requestQueue.add(request);
 
     }
+
 }
